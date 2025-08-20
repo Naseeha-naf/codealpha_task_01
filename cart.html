@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}Cart{% endblock %}
+{% block content %}
+<h3>Your Cart</h3>
+{% if not items %}
+  <p>Your cart is empty.</p>
+  <a class="btn btn-primary" href="{{ url_for('products') }}">Shop now</a>
+{% else %}
+  <table class="table">
+    <thead>
+      <tr><th>Product</th><th>Price</th><th>Qty</th><th>Subtotal</th><th></th></tr>
+    </thead>
+    <tbody>
+      {% for it in items %}
+      <tr>
+        <td>{{ it.name }}</td>
+        <td>₹ {{ '%.2f'|format(it.price) }}</td>
+        <td>{{ it.qty }}</td>
+        <td>₹ {{ '%.2f'|format(it.subtotal) }}</td>
+        <td><a class="btn btn-sm btn-danger" href="{{ url_for('remove_from_cart', pid=it.id) }}">Remove</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p><strong>Total: ₹ {{ '%.2f'|format(total) }}</strong></p>
+  <form method="post" action="{{ url_for('checkout') }}">
+    <button class="btn btn-primary">Place Order</button>
+  </form>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}Checkout{% endblock %}
+{% block content %}
+<div class="card p-3 shadow-sm">
+  <h3>Checkout</h3>
+  {% if not session.get('cart_count') or session.get('cart_count') == 0 %}
+    <p>No items to checkout.</p>
+    <a class="btn btn-primary" href="{{ url_for('products') }}">Back to shop</a>
+  {% else %}
+    <p>Your order was placed. Thank you!</p>
+    <a class="btn btn-primary" href="{{ url_for('products') }}">Continue shopping</a>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-5">
+    <div class="card p-3 shadow-sm">
+      <h4 class="mb-3">Login</h4>
+      <form method="post">
+        <div class="mb-2">
+          <label class="form-label">Username</label>
+          <input name="username" class="form-control" required>
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" required>
+        </div>
+        <button class="btn btn-primary">Login</button>
+        <a class="btn btn-link" href="{{ url_for('signup') }}">Sign up</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

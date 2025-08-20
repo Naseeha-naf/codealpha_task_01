@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+    <h2>Welcome {{ session['username'] }}</h2>
+    <h3>Available Products</h3>
+    <ul>
+        {% for product in products %}
+            <li>
+                <strong>{{ product[1] }}</strong> - Rs.{{ product[2] }} <br>
+                {{ product[3] }}
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
