@@ -1,0 +1,115 @@
+/* --- General Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Body --- */
+body {
+    background-color: #fff8f5; /* soft pastel background */
+    color: #333;
+}
+
+/* --- Navbar --- */
+nav {
+    background-color: #ffd8d0; /* pastel pink */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Navbar links */
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    margin: 0 10px;
+    padding: 8px 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffe5de; /* lighter pastel */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Buttons --- */
+button {
+    background-color: #ffb6a6; /* soft pastel button */
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffa28b;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* --- Input fields --- */
+input[type="text"], input[type="password"], input[type="email"] {
+    border: 1px solid #ffd1c1;
+    border-radius: 12px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff7f63;
+    box-shadow: 0 4px 10px rgba(255,127,99,0.3);
+}
+
+/* --- Product Cards --- */
+.product-card {
+    background-color: #fff0ed;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    border-radius: 15px;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+/* --- Cart Items --- */
+.cart-item {
+    background-color: #fff4f0;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item button {
+    background-color: #ff7f63;
+}
+
+.cart-item button:hover {
+    background-color: #ff5a3f;
+}
